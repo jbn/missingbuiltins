@@ -12,17 +12,17 @@ Code I write over and over for no good reason.
 
 Gonna see what happens by means of accretion.
 
-~~~~~~~~~~~~
+------------
 Installation
-~~~~~~~~~~~~
+------------
 
 .. code-block:: bash
 
    pip install missingbuiltins
 
-~~~~~
+-----
 Usage
-~~~~~
+-----
 
 .. code-block:: python
 

@@ -34,7 +34,7 @@ setup(
     description="Code I write over and over for no good reason",
     install_requires=requirements,
     license="GNU General Public License v3",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     include_package_data=True,
     keywords='missingbuiltins',
     name='missingbuiltins',
