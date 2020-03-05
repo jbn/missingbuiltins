@@ -29,7 +29,7 @@ Usage
    from missingbuiltins import jsonl_load, jsonl_dump, chunker
 
    items = chunker(range(5), 2)
-   jsonl_dumps("my_items.jsonl", items)  # => 5
-   got = list(jsonl_load(my_items))  # => [[1, 2], [3, 4], [5]]
+   jsonl_dump("my_items.jsonl", items)  # => 5
+   got = list(jsonl_load("my_items.jsonl"))  # => [[1, 2], [3, 4], [5]]
 
 
