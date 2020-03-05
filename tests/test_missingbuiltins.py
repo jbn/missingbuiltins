@@ -27,7 +27,7 @@ def test_jsonl_utils(tmpdir):
         return d
 
     output_path = tmpdir / "items.jsonl"
-    jsonl_dump(str(output_path), items, extractor=add_field)
+    jsonl_dump(str(output_path), (add_field(item) for item in items))
 
     got = list(jsonl_load(str(output_path), OrderedDict))
     assert all('x' in item for item in got)

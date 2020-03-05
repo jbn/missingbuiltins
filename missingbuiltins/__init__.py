@@ -20,21 +20,19 @@ def jsonl_load(path: Union[str, Path], object_hook=dict):
             yield json.loads(line, object_hook=dict)
 
 
-def jsonl_dump(path: Union[str, Path], items, extractor=lambda item: item):
+def jsonl_dump(path: Union[str, Path], items):
     """
-    Save a given set of possibly translated items to a json-lines file.
+    Save a given iterable of items to a json-lines file.
 
     :param path: the path to the json-lines file
     :param items: an iterator of JSON-serializable documents to write
-    :param extractor: optionally extract an element from or translate the
-        each item before writing.
     :return: the total number of objects read
     """
     n = 0
 
     with Path(path).open("w") as fp:
         for item in items:
-            fp.write(json.dumps(extractor(item)) + "\n")
+            fp.write(json.dumps(item) + "\n")
             n += 1
 
     return n
