@@ -1,6 +1,6 @@
 __author__ = """John Bjorn Nelson"""
 __email__ = 'jbn@abreka.com'
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 import json
 from pathlib import Path
